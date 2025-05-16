@@ -11,6 +11,7 @@ const App = () => {
     <>
       <GlobalStyles />
       <Header setActive={setActive} active={active} />
+      <CardsContainer active={active} />
 
       {/* <Toggle setActive={setActive} active={active} /> */}
     </>
