@@ -1,14 +1,13 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { StyledInput, StyledLabel } from '../toggle/toggle.styles';
 
-const Toggle = () => {
-  const [active, setActive] = useState(false);
+const Toggle = ({ setActive, active }) => {
   return (
     <>
       <StyledInput
         id='toggle'
         type='checkbox'
-        onClick={() => setActive(!active)}
+        onChange={() => setActive(!active)}
       />
       <StyledLabel htmlFor='toggle' />
     </>

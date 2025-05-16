@@ -1,13 +1,16 @@
-import Button from './button/Button';
+// import Button from './button/Button';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Toggle from './components/toggle/Toggle';
+import { useState } from 'react';
 
 const App = () => {
+  const [active, setActive] = useState(false);
+  console.log(active);
   return (
     <>
       <GlobalStyles />
       <h1>Our Pricing</h1>
-      <Toggle />
+      <Toggle setActive={setActive} active={active} />
     </>
   );
 };

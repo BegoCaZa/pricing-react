@@ -30,5 +30,11 @@ export const GlobalStyles = createGlobalStyle`
     body {
     margin: 0;
     font-family: sans-serif;
+    background-color: #F7F7FE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     }
 `;
