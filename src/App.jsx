@@ -1,7 +1,8 @@
 // import Button from './button/Button';
 import { GlobalStyles } from './styles/GlobalStyles';
-import Toggle from './components/toggle/Toggle';
+// import Toggle from './components/toggle/Toggle';
 import { useState } from 'react';
+import Header from './components/header/Header';
 
 const App = () => {
   const [active, setActive] = useState(false);
@@ -9,8 +10,9 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <h1>Our Pricing</h1>
-      <Toggle setActive={setActive} active={active} />
+      <Header setActive={setActive} active={active} />
+
+      {/* <Toggle setActive={setActive} active={active} /> */}
     </>
   );
 };
