@@ -1,13 +1,13 @@
 import Button from './button/Button';
 import { GlobalStyles } from './styles/GlobalStyles';
+import Toggle from './components/toggle/Toggle';
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
-      <h1>REACT</h1>
-      <Button color='lime' hoverColor='red' />
-      <Button color='orange' hoverColor='purple' />
+      <h1>Our Pricing</h1>
+      <Toggle />
     </>
   );
 };
