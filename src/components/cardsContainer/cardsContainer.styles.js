@@ -64,7 +64,8 @@ const StyledStorageUsersContainer = styled.div`
   gap: 0;
   width: 100%;
   border-top: 1px solid
-    ${({ plan }) => (plan === 'Professional' ? COLORS.white : COLORS.lightGrey)};
+    ${({ plan }) =>
+      plan === 'Professional' ? COLORS.lightWhite : COLORS.lightGrey};
 `;
 const StyledCardPlanInfoText = styled.p`
   font-size: 15px;
@@ -97,14 +98,13 @@ const StyledButton = styled.button`
 
   &:hover {
     background: ${({ plan }) =>
-      plan === 'Professional' ? COLORS.lilac : COLORS.white};
+      plan === 'Professional' ? 'transparent' : COLORS.white};
     color: ${({ plan }) =>
-      plan === 'Professional' ? COLORS.white : COLORS.lilac};
-    border: 1px solid ${COLORS.lilac};
+      plan === 'Professional' ? COLORS.white : COLORS.lilacSolid};
+    border: solid 1px
+      ${({ plan }) =>
+        plan === 'Professional' ? COLORS.white : COLORS.lilacSolid};
   }
-  }
-
-   
 `;
 
 export {
