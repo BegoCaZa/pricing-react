@@ -20,8 +20,9 @@ const StyledCard = styled.div`
   text-align: center;
   }
 `;
-const StyledPlan = styled.h2`
-  font-size: 1.5rem;
+const StyledPlanTitle = styled.p`
+  font-size: 18px;
+  font-weight: 700;
   color: ${({ plan }) =>
     plan === 'Professional' ? COLORS.white : COLORS.darkGrey};
 `;
@@ -63,7 +64,7 @@ const StyledButton = styled.button`
 export {
   StyledCardsContainer,
   StyledCard,
-  StyledPlan,
+  StyledPlanTitle,
   StyledPrice,
   StyledStorage,
   StyledUsers,

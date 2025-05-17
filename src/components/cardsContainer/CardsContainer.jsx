@@ -2,7 +2,7 @@ import { PRICING_INFO } from '../../constants/PRICING_INFO';
 import {
   StyledCardsContainer,
   StyledCard,
-  StyledPlan,
+  StyledPlanTitle,
   StyledPrice,
   StyledStorage,
   StyledUsers,
@@ -18,7 +18,7 @@ const CardsContainer = ({ active }) => {
       {/* //estilo de cada card */}
       {PRICING_INFO.map((info, index) => (
         <StyledCard plan={info.plan} key={index} active={active}>
-          <StyledPlan>{info.plan}</StyledPlan>
+          <StyledPlanTitle>{info.plan}</StyledPlanTitle>
           <StyledPrice>
             {active ? `$${info.annually}` : `$${info.monthly}`}
           </StyledPrice>
