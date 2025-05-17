@@ -7,7 +7,7 @@ const StyledCardsContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  gap: 20px;
+  gap: 32px;
 `;
 
 const StyledCard = styled.div`
@@ -22,6 +22,7 @@ const StyledCard = styled.div`
   margin-inline: auto;
   align-items: center;
   justify-content: center;
+    gap: 32px;
   }
 `;
 const StyledPlanTitle = styled.p`
@@ -31,6 +32,16 @@ const StyledPlanTitle = styled.p`
   color: ${({ plan }) =>
     plan === 'Professional' ? COLORS.white : COLORS.darkGrey};
 `;
+const StyledInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  gap: 8px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+`;
 const StyledPrice = styled.p`
   font-size: 72px;
   font-weight: 700;
@@ -38,11 +49,20 @@ const StyledPrice = styled.p`
   padding: 24px;
   color: ${({ plan }) =>
     plan === 'Professional' ? COLORS.white : COLORS.darkGrey};
+  border-bottom: 1px solid
+    ${({ plan }) => (plan === 'Professional' ? COLORS.white : COLORS.lightGrey)};
+`;
+
+const StyledStorageUsersContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
 `;
 const StyledCardPlanInfoText = styled.p`
   font-size: 15px;
   font-weight: 600;
-  border-top: 1px solid
+  border-bottom: 1px solid
     ${({ plan }) => (plan === 'Professional' ? COLORS.white : COLORS.lightGrey)};
   padding: 14px;
   margin: 0;
@@ -61,10 +81,11 @@ const StyledButton = styled.button`
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  font-size: 12px;
+  font-weight: 700;
   margin: 0;
-
+  width: 100%;
+  padding: 16px;
   }
 `;
 
@@ -74,5 +95,7 @@ export {
   StyledPlanTitle,
   StyledPrice,
   StyledButton,
-  StyledCardPlanInfoText
+  StyledStorageUsersContainer,
+  StyledCardPlanInfoText,
+  StyledInfoContainer
 };
