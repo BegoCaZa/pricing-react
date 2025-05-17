@@ -1,12 +1,21 @@
 import Toggle from '../toggle/Toggle';
-import { StyledHeaderContainer, StyledTitle } from './header.styles';
+import {
+  StyledHeaderContainer,
+  StyledTitle,
+  StyledToggleContainer,
+  StyledToggelOption
+} from './header.styles';
 
 const Header = ({ setActive, active }) => {
   return (
     <>
       <StyledHeaderContainer>
         <StyledTitle>Our Prices</StyledTitle>
-        <Toggle setActive={setActive} active={active} />
+        <StyledToggleContainer>
+          <StyledToggelOption>Monthly</StyledToggelOption>
+          <Toggle setActive={setActive} active={active} />
+          <StyledToggelOption>Monthly</StyledToggelOption>
+        </StyledToggleContainer>
       </StyledHeaderContainer>
     </>
   );

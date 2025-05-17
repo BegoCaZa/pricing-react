@@ -1,19 +1,34 @@
 import { PRICING_INFO } from '../../constants/PRICING_INFO';
+import {
+  StyledCardsContainer,
+  StyledCard,
+  StyledPlan,
+  StyledPrice,
+  StyledStorage,
+  StyledUsers,
+  StyledSend,
+  StyledButton
+} from './cardsContainer.styles';
 
-const CardsContainer = () => {
+//todo el contenedri va a recivir si esta en activo o no para pintar la informacion
+const CardsContainer = ({ active }) => {
   return (
-    <div>
+    // estilo del contenedor principal
+    <StyledCardsContainer>
+      {/* //estilo de cada card */}
       {PRICING_INFO.map((info, index) => (
-        <div key={index}>
-          <h2>{info.plan}</h2>
-          <p>{info.storage}</p>
-          <p>{info.users}</p>
-          <p>{info.send}</p>
-          <p>${info.monthly}/mo</p>
-          <p>${info.annually}/yr</p>
-        </div>
+        <StyledCard plan={info.plan} key={index} active={active}>
+          <StyledPlan>{info.plan}</StyledPlan>
+          <StyledPrice>
+            {active ? `$${info.annually}` : `$${info.monthly}`}
+          </StyledPrice>
+          <StyledStorage>{info.storage}</StyledStorage>
+          <StyledUsers>{info.users}</StyledUsers>
+          <StyledSend>{info.send}</StyledSend>
+          <StyledButton>LEARN MORE</StyledButton>
+        </StyledCard>
       ))}
-    </div>
+    </StyledCardsContainer>
   );
 };
 export default CardsContainer;

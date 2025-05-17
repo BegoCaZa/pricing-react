@@ -3,6 +3,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 // import Toggle from './components/toggle/Toggle';
 import { useState } from 'react';
 import Header from './components/header/Header';
+import CardsContainer from './components/cardsContainer/CardsContainer';
 
 const App = () => {
   const [active, setActive] = useState(false);

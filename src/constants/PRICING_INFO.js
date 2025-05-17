@@ -5,7 +5,8 @@ export const PRICING_INFO = [
     users: '2 Users Allowed',
     send: 'Send up to 3 GB',
     monthly: '19.99',
-    annually: '199.99'
+    annually: '199.99',
+    buttonColor: 'lilac'
   },
   {
     plan: 'Professional',
@@ -13,7 +14,8 @@ export const PRICING_INFO = [
     users: '5 Users Allowed',
     send: 'Send up to 10 GB',
     monthly: '24.99',
-    annually: '249.99'
+    annually: '249.99',
+    buttonColor: 'white'
   },
   {
     plan: 'Master',
@@ -21,6 +23,7 @@ export const PRICING_INFO = [
     users: '10 Users Allowed',
     send: 'Send up to 20 GB',
     monthly: '39.99',
-    annually: '399.99'
+    annually: '399.99',
+    buttonColor: 'lilac'
   }
 ];

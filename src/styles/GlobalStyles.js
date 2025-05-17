@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #F7F7FE;
     display: flex;
     flex-direction: column;
