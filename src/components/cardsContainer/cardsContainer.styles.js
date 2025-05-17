@@ -8,6 +8,13 @@ const StyledCardsContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
   gap: 32px;
+
+  //Web
+  @media (min-width: 1080px) {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
 `;
 
 const StyledCard = styled.div`
@@ -43,14 +50,12 @@ const StyledInfoContainer = styled.div`
   align-items: center;
 `;
 const StyledPrice = styled.p`
-  font-size: 72px;
+  font-size: ${({ active }) => (active ? '40px' : '68px')};
   font-weight: 700;
   margin: 0;
   padding: 24px;
   color: ${({ plan }) =>
     plan === 'Professional' ? COLORS.white : COLORS.darkGrey};
-  border-bottom: 1px solid
-    ${({ plan }) => (plan === 'Professional' ? COLORS.white : COLORS.lightGrey)};
 `;
 
 const StyledStorageUsersContainer = styled.div`
@@ -58,12 +63,15 @@ const StyledStorageUsersContainer = styled.div`
   flex-direction: column;
   gap: 0;
   width: 100%;
+  border-top: 1px solid
+    ${({ plan }) => (plan === 'Professional' ? COLORS.white : COLORS.lightGrey)};
 `;
 const StyledCardPlanInfoText = styled.p`
   font-size: 15px;
   font-weight: 600;
   border-bottom: 1px solid
-    ${({ plan }) => (plan === 'Professional' ? COLORS.white : COLORS.lightGrey)};
+    ${({ plan }) =>
+      plan === 'Professional' ? COLORS.lightWhite : COLORS.lightGrey};
   padding: 14px;
   margin: 0;
   width: 100%;
@@ -76,7 +84,7 @@ const StyledButton = styled.button`
   background: ${({ plan }) =>
     plan === 'Professional' ? COLORS.white : COLORS.lilac};
   color: ${({ plan }) =>
-    plan === 'Professional' ? COLORS.darkGrey : COLORS.white};
+    plan === 'Professional' ? COLORS.grey : COLORS.white};
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1rem;
@@ -86,7 +94,17 @@ const StyledButton = styled.button`
   margin: 0;
   width: 100%;
   padding: 16px;
+
+  &:hover {
+    background: ${({ plan }) =>
+      plan === 'Professional' ? COLORS.lilac : COLORS.white};
+    color: ${({ plan }) =>
+      plan === 'Professional' ? COLORS.white : COLORS.lilac};
+    border: 1px solid ${COLORS.lilac};
   }
+  }
+
+   
 `;
 
 export {

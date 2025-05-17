@@ -21,6 +21,9 @@ const StyledToggleContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+
+  @media (min-width: 1080px) {
+    width: 25%;
 `;
 const StyledToggelOption = styled.span`
   font-size: 15px;

@@ -34,7 +34,16 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     min-height: 100vh;
+
+    //Web
+  @media (min-width: 1080px) {
+    justify-content: flex-start;
+    padding-top: 2rem;
+    
+  }
     }
+
+     
 `;

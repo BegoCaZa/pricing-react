@@ -10,7 +10,7 @@ import {
   StyledInfoContainer
 } from './cardsContainer.styles';
 
-//todo el contenedri va a recivir si esta en activo o no para pintar la informacion
+//todo el contenedor va a recivir si esta en activo o no para pintar la informacion
 const CardsContainer = ({ active }) => {
   return (
     // estilo del contenedor principal
@@ -19,17 +19,23 @@ const CardsContainer = ({ active }) => {
       {PRICING_INFO.map((info, index) => (
         <StyledCard plan={info.plan} key={index}>
           <StyledInfoContainer>
-            <StyledPlanTitle>{info.plan}</StyledPlanTitle>
-            <StyledPrice>
+            <StyledPlanTitle plan={info.plan}>{info.plan}</StyledPlanTitle>
+            <StyledPrice plan={info.plan}>
               {active ? `$${info.annually}` : `$${info.monthly}`}
             </StyledPrice>
-            <StyledStorageUsersContainer>
-              <StyledCardPlanInfoText>{info.storage}</StyledCardPlanInfoText>
-              <StyledCardPlanInfoText>{info.users}</StyledCardPlanInfoText>
-              <StyledCardPlanInfoText>{info.send}</StyledCardPlanInfoText>
+            <StyledStorageUsersContainer plan={info.plan}>
+              <StyledCardPlanInfoText plan={info.plan}>
+                {info.storage}
+              </StyledCardPlanInfoText>
+              <StyledCardPlanInfoText plan={info.plan}>
+                {info.users}
+              </StyledCardPlanInfoText>
+              <StyledCardPlanInfoText plan={info.plan}>
+                {info.send}
+              </StyledCardPlanInfoText>
             </StyledStorageUsersContainer>
           </StyledInfoContainer>
-          <StyledButton>LEARN MORE</StyledButton>
+          <StyledButton plan={info.plan}>LEARN MORE</StyledButton>
         </StyledCard>
       ))}
     </StyledCardsContainer>

@@ -1,5 +1,6 @@
 export const COLORS = {
   white: '#ffffff',
+  lightWhite: 'rgba(255, 255, 255, 0.38)',
   lilac: 'linear-gradient(135deg, #a2a7f0 0%, #696edd 100%)',
   darkGrey: '#4A4D60',
   grey: '#6E728e',
