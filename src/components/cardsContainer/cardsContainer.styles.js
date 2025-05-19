@@ -6,14 +6,15 @@ const StyledCardsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1.25rem;
+  margin-top: 2.5rem;
   gap: 2rem;
 
   //Web
   @media (min-width: 1080px) {
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1.875rem;
     padding: 0 1rem;
+    margin-top: 3.75rem;
   }
 `;
 
@@ -21,7 +22,7 @@ const StyledCard = styled.div`
   background: ${({ plan }) =>
     plan === 'Professional' ? COLORS.lilac : COLORS.white};
   border-radius: 1rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -29,9 +30,15 @@ const StyledCard = styled.div`
   margin-inline: auto;
   align-items: center;
   justify-content: center;
-    gap: 2rem;
+  gap: 2rem;
+
+  //Web
+  @media (min-width: 1080px) {
+    scale: ${({ plan }) => (plan === 'Professional' ? `1.1` : `1`)};
+    z-index: ${({ plan }) => (plan === 'Professional' ? `1` : `0`)};
   }
 `;
+
 const StyledPlanTitle = styled.p`
   font-size: 1.125rem;
   font-weight: 700;

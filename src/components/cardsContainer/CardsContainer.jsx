@@ -9,6 +9,7 @@ import {
   StyledCardPlanInfoText,
   StyledInfoContainer
 } from './cardsContainer.styles';
+import { v4 } from 'uuid';
 
 //todo el contenedor va a recivir si esta en activo o no para pintar la informacion
 const CardsContainer = ({ active }) => {
@@ -16,8 +17,8 @@ const CardsContainer = ({ active }) => {
     // estilo del contenedor principal
     <StyledCardsContainer>
       {/* //estilo de cada card */}
-      {PRICING_INFO.map((info, index) => (
-        <StyledCard plan={info.plan} key={index}>
+      {PRICING_INFO.map(info => (
+        <StyledCard plan={info.plan} key={v4()}>
           <StyledInfoContainer>
             <StyledPlanTitle plan={info.plan}>{info.plan}</StyledPlanTitle>
             <StyledPrice plan={info.plan}>

@@ -36,12 +36,16 @@ export const GlobalStyles = createGlobalStyle`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url(/assets/images/bg-top.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size:90%;
 
     //Web
   @media (min-width: 1080px) {
-    justify-content: flex-start;
-    padding-top: 2rem;
-    
+    justify-content: center;
   }
     }
 
